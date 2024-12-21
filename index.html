@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lapin Animation</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/MotionPathPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.0/jquery.waypoints.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery.counterup@2.1.0/jquery.counterup.min.js"></script>
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <h1>Lapin Animation</h1>
+    <div id="scroll-container">
+      <div>
+        <h1>COUCOU</h1>
+        <a href="https://lucasjuillat.fr" target="_blank">
+          <img id="myImage" src="images/fdp de lapin.jpg" alt="Demo Image" />
+        </a>
+        <h1>Lapin Animation</h1>
+      </div>
+    </div>
+    <h1>Lapin Animation</h1>
+    <h1>Lapin Animation</h1>
+    <h1>Lapin Animation</h1>
+    <h1>Lapin Animation</h1>
+    <h1>Lapin Animation</h1>
+
+    <div class="counter">Chiffre clé : <span class="counterup">1500</span></div>
+
+    <script>
+      jQuery(document).ready(function ($) {
+        $(".counterup").counterUp({
+          delay: 10, // délai entre chaque incrément en ms
+          time: 1000, // durée totale de l'animation en ms
+        });
+      });
+    </script>
+
+    <div class="black"></div>
+
+    <script>
+      gsap.registerPlugin(ScrollTrigger, MotionPathPlugin);
+
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: "#scroll-container", // Conteneur d'animation
+          start: "top top", // L'animation commence quand le conteneur est en haut
+          end: "+=100%", // Termine après un défilement équivalent à la hauteur de la fenêtre
+          scrub: true, // Synchronisation fluide
+          pin: "#scroll-container", // Fixe le conteneur pendant l'animation
+          pinSpacing: true, // Ajoute un espace pour permettre le scroll après
+        },
+      });
+
+      // Chemin
+      tl.to("#myImage", {
+        motionPath: {
+          path: [
+            { x: 0, y: 0 },
+            { x: 1550, y: 200 },
+          ],
+          autoRotate: false,
+        },
+        duration: 1,
+      })
+        // Rotation miroir
+        .to("#myImage", {
+          scaleX: -1, // Inversion horizontale (miroir)
+          duration: 0.2,
+        })
+        // Segment 2
+        .to("#myImage", {
+          motionPath: {
+            path: [
+              { x: 1550, y: 200 },
+              { x: 50, y: 400 },
+            ],
+            autoRotate: false,
+          },
+          duration: 1,
+        })
+        // Retour à l'orientation normale
+        .to("#myImage", {
+          scaleX: 1, // Revenir à la normale
+          duration: 0.2,
+        })
+        // Segment 3
+        .to("#myImage", {
+          motionPath: {
+            path: [
+              { x: 50, y: 400 },
+              { x: 1450, y: 600 },
+            ],
+            autoRotate: false,
+          },
+          duration: 1,
+        })
+        .to("#myImage", {
+          scaleX: -1, // Inversion horizontale (miroir)
+          duration: 0.2,
+        })
+        // Segment 4
+        .to("#myImage", {
+          motionPath: {
+            path: [
+              { x: 1450, y: 600 },
+              { x: 10, y: 700 },
+            ],
+            autoRotate: false,
+          },
+          duration: 1,
+        });
+    </script>
+  </body>
+</html>
