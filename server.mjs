@@ -13,7 +13,7 @@ const server = createServer(async (req, res) => {
     const mimeTypes = {
       ".html": "text/html",
       ".css": "text/css",
-      ".js": "application/javascript",
+      ".js": "text/javascript",
       ".png": "image/png",
       ".jpg": "image/jpeg",
       ".jpeg": "image/jpeg",
@@ -23,6 +23,13 @@ const server = createServer(async (req, res) => {
       ".otf": "font/otf",
       ".woff": "font/woff",
       ".woff2": "font/woff2",
+      ".mp3": "audio/mp3",
+      ".wav": "audio/wav",
+      ".ogg": "audio/ogg",
+      ".mp4": "video/mp4",
+      ".webm": "video/webm",
+      ".avi": "video/x-msvideo",
+      ".mov": "video/quicktime",
     };
     const contentType = mimeTypes[ext] || "application/octet-stream";
 

@@ -1,0 +1,152 @@
+@font-face {
+  font-family: "Lucioleregular";
+  font-family: "BebasNeue";
+  font-family: "KleeOne";
+  src: url("/fonts/LUCIOLE-REGULAR.TTF") format("opentype");
+  src: url("/fonts/BEBASNEUE-REGULAR.OTF") format("opentype");
+  src: url("/fonts/KleeOne-Regular.ttf") format("opentype");
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  height: 100vh;
+  width: 100vw;
+  background-color: #191919;
+  overflow: hidden;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  width: 80%;
+  height: 100%;
+  gap: 20px;
+}
+
+.content img {
+  width: 100%;
+  height: auto;
+}
+
+.content h1 {
+  font-family: BebasNeue;
+  font-size: 13rem;
+  text-align: center;
+  width: 95%;
+  color: #fff;
+}
+
+.startbutton {
+  display: flex;
+  width: 435px;
+  height: 108px;
+  padding: 50px 130px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  border: none;
+  border-radius: 500px;
+  background: #fff;
+  &:hover {
+    cursor: pointer;
+    scale: 1.1;
+  }
+}
+
+.top-image {
+  margin-bottom: 50px;
+}
+
+.bot-image {
+  margin-top: 50px;
+}
+
+.audio-controls {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #191919;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.audio-controls button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.audio-controls button:focus {
+  outline: none;
+}
+
+#subtitles-menu.hidden {
+  display: none;
+}
+
+#audio-timeline {
+  flex-grow: 1;
+  width: 80%;
+  margin: 0 10px;
+}
+
+.right-controls {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  width: 20%;
+}
+
+.time-display {
+  font-size: 14px;
+}
+
+/* MEDIA QUERY */
+@media (max-width: 1610px) {
+  .content h1 {
+    font-size: 10rem;
+  }
+
+  button {
+    width: 350px;
+    height: 90px;
+    padding: 40px 100px;
+  }
+}
+
+@media (max-width: 1072px) {
+  .content h1 {
+    font-size: 7rem;
+  }
+
+  button {
+    width: 250px;
+    height: 70px;
+    padding: 30px 80px;
+  }
+}
+
+@media (max-width: 755px) {
+  .content h1 {
+    font-size: 5rem;
+  }
+
+  button {
+    width: 200px;
+    height: 60px;
+    padding: 20px 60px;
+  }
+}

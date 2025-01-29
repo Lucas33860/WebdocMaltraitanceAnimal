@@ -1,0 +1,24 @@
+@font-face {
+  font-family: "Lucioleregular";
+  src: url("/fonts/LUCIOLE-REGULAR.TTF") format("opentype");
+}
+
+@font-face {
+  font-family: "BebasNeue";
+  src: url("/fonts/BEBASNEUE-REGULAR.OTF") format("opentype");
+}
+
+@font-face {
+  font-family: "KleeOne";
+  src: url("/fonts/KleeOne-Regular.ttf") format("opentype");
+}
+
+h1 {
+  font-family: BebasNeue;
+  font-size: 2.5rem;
+}
+
+button {
+  font-family: KleeOne;
+  font-size: 2rem;
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WEBDOC Maltraitance Animal</title>
+    <link rel="stylesheet" href="/style/reset.css" />
+    <link rel="stylesheet" href="/style/fonts.css" />
+    <link rel="stylesheet" href="/style/loading.css" />
+    <link rel="stylesheet" href="/style/styles.css" />
+    <script src="/script/gsap.js" defer></script>
+    <script src="/script/script.js" defer></script>
+    <script src="/script/audio.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  </head>
+  <body>
+    <section id="first-page" class="container">
+      <img src="/images/imagedecon.jpg" alt="Ville" />
+      <style>
+        #first-page {
+          position: relative;
+          overflow: hidden;
+        }
+
+        #first-page img {
+          width: 110%;
+          height: 110%;
+          position: absolute;
+          top: -5%;
+          left: -5%;
+        }
+
+        body {
+          overflow: hidden;
+        }
+      </style>
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          gsap.to("#first-page img", {
+            x: "+=10",
+            y: "+=10",
+            duration: 2,
+            repeat: -1,
+            yoyo: true,
+            ease: "power1.inOut",
+          });
+        });
+      </script>
+    </section>
+  </body>
+</html>
