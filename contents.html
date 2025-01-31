@@ -8,6 +8,7 @@
       content="Un web documentaire sur la maltraitance animale."
     />
     <title>Contents Webdoc SPA</title>
+    <link rel="stylesheet" href="/style/button.css" />
     <link rel="stylesheet" href="/style/reset.css" />
     <link rel="stylesheet" href="/style/fonts.css" />
     <link rel="stylesheet" href="/style/loading.css" />
@@ -17,8 +18,48 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
   </head>
   <body>
-    <section class="container">
-      <h1>BONJOUR</h1>
+    <section id="contents" class="container">
+      <div class="size-cadre">
+        <h1>Sommaire</h1>
+        <div class="button-chapter">
+          <button id="chapter1">Chapitre 1</button>
+          <button id="chapter2">Chapitre 2</button>
+          <button id="chapter3">Chapitre 3</button>
+        </div>
+      </div>
+    </section>
+    <section id="chapter1index1" class="container">
+      <div class="border-cadre">
+        <div class="size-cadre-chapter">
+          <button
+            class="back"
+            id="back1"
+            style="position: absolute; bottom: 10px; left: 10px"
+          >
+            Quitter
+          </button>
+          <img src="/images/top-contour.svg" alt="image haut" class="fade-in" />
+          <h1 class="fade-in">
+            Chapitre 1 : Les animaux et l’éducation à la bienveillance
+          </h1>
+          <p class="fade-in">
+            Comment sensibiliser sur la maltraitance des animaux de compagnie ?
+          </p>
+          <img
+            src="/images/bottom-contour.svg"
+            alt="image bas"
+            class="fade-in"
+          />
+
+          <button
+            class="chapter1next1"
+            id="chapter1next1"
+            style="position: absolute; bottom: 10px; right: 10px"
+          >
+            Page Suivante
+          </button>
+        </div>
+      </div>
     </section>
   </body>
 </html>

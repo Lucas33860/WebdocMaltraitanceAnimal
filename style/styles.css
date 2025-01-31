@@ -43,24 +43,6 @@ body {
   color: #fff;
 }
 
-button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 18px;
-  width: 170px;
-  height: 42px;
-  flex-shrink: 0;
-  border-radius: 50px;
-  border: 1px solid #fff;
-  color: #fff;
-  background: #010101;
-  &:hover {
-    cursor: pointer;
-    background: #434343;
-  }
-}
-
 .startbutton {
   display: flex;
   width: 435px;
@@ -183,6 +165,17 @@ video {
     width: 90%;
     color: #fff;
   }
+}
+
+.subtitles-menu {
+  display: none;
+  position: absolute;
+  top: 83%;
+  left: 87%;
+  border: 2px solid #000;
+  padding: 10px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 .cadre-image {
@@ -395,6 +388,44 @@ video {
   }
 }
 
+/*  */
+/* CONTENTS, CHAPTERS CSS */
+/*  */
+
+.button-chapter {
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+}
+
+.size-cadre-chapter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  img {
+    width: 80%;
+  }
+  h1 {
+    font-family: BebasNeue;
+    font-size: 5rem;
+    text-align: center;
+    width: 85%;
+    color: #fff;
+    margin: 80px 0 20px 0;
+  }
+  p {
+    margin-top: 50px;
+    font-family: KleeOne;
+    font-size: 2rem;
+    text-align: center;
+    width: 90%;
+    color: #fff;
+    margin: 0 0 100px 0;
+  }
+}
 /*  */
 /* ANIMATION CSS */
 /*  */

@@ -2,7 +2,7 @@ const video = document.querySelector(".video-prologue video");
 const playPauseButton = document.getElementById("play-pause");
 const muteUnmuteButton = document.getElementById("mute-unmute");
 const subtitlesButton = document.getElementById("subtitles");
-const subtitlesMenu = document.getElementById("subtitles-menu");
+const subtitlesMenu = document.getElementById("language-menu");
 const audioTimeline = document.getElementById("audio-timeline");
 const currentTimeDisplay = document.getElementById("current-time");
 const durationTimeDisplay = document.getElementById("duration-time");
@@ -33,8 +33,25 @@ muteUnmuteButton.addEventListener("click", () => {
     : '<img src="/images/sound-on.svg" alt="Unmute" style="width: 32px; height: 32px;">';
 });
 
+let subtitlesMenuVisible = false;
+
 subtitlesButton.addEventListener("click", () => {
-  subtitlesMenu.classList.toggle("hidden");
+  if (subtitlesMenu) {
+    if (!subtitlesMenuVisible) {
+      subtitlesMenu.classList.remove("hidden");
+      subtitlesMenu.style.display = "block";
+      subtitlesMenuVisible = true;
+    } else {
+      subtitlesMenu.classList.toggle("hidden");
+      if (subtitlesMenu.classList.contains("hidden")) {
+        subtitlesMenu.style.display = "none";
+      } else {
+        subtitlesMenu.style.display = "block";
+      }
+    }
+  } else {
+    console.error("Subtitles menu element not found");
+  }
 });
 
 video.addEventListener("loadedmetadata", () => {
@@ -55,4 +72,12 @@ function formatTime(seconds) {
   const minutes = Math.floor(seconds / 60);
   const secs = Math.floor(seconds % 60);
   return `${minutes}:${secs < 10 ? "0" : ""}${secs}`;
+}
+
+function setSubtitle(trackId) {
+  const video = document.querySelector("video");
+  const tracks = video.textTracks;
+  for (let i = 0; i < tracks.length; i++) {
+    tracks[i].mode = tracks[i].id === trackId ? "showing" : "hidden";
+  }
 }

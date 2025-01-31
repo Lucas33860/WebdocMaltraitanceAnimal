@@ -1,0 +1,33 @@
+@font-face {
+  font-family: "Lucioleregular";
+  src: url("/fonts/LUCIOLE-REGULAR.TTF") format("opentype");
+}
+
+@font-face {
+  font-family: "BebasNeue";
+  src: url("/fonts/BEBASNEUE-REGULAR.OTF") format("opentype");
+}
+
+@font-face {
+  font-family: "KleeOne";
+  src: url("/fonts/KleeOne-Regular.ttf") format("opentype");
+}
+
+button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  font-family: KleeOne;
+  width: 170px;
+  height: 42px;
+  flex-shrink: 0;
+  border-radius: 50px;
+  border: 1px solid #fff;
+  color: #fff;
+  background: #010101;
+  &:hover {
+    cursor: pointer;
+    background: #434343;
+  }
+}

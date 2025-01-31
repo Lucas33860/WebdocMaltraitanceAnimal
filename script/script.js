@@ -62,3 +62,14 @@ document.getElementById("leave4").addEventListener("click", function () {
   document.getElementById("fourth-page").style.display = "none";
   document.getElementById("fifth-page").style.display = "none";
 });
+
+document.getElementById("subtitles").addEventListener("click", function () {
+  const menu = document.getElementById("language-menu");
+  menu.style.display = menu.style.display === "none" ? "block" : "none";
+});
+
+document.querySelectorAll("#language-menu button").forEach((button) => {
+  button.addEventListener("click", function () {
+    document.getElementById("language-menu").style.display = "none";
+  });
+});
