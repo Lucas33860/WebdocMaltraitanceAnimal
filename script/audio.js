@@ -1,4 +1,4 @@
-const audio = document.getElementById("audio");
+const video = document.querySelector(".video-prologue video");
 const playPauseButton = document.getElementById("play-pause");
 const muteUnmuteButton = document.getElementById("mute-unmute");
 const subtitlesButton = document.getElementById("subtitles");
@@ -6,7 +6,6 @@ const subtitlesMenu = document.getElementById("subtitles-menu");
 const audioTimeline = document.getElementById("audio-timeline");
 const currentTimeDisplay = document.getElementById("current-time");
 const durationTimeDisplay = document.getElementById("duration-time");
-const video = document.querySelector(".video-prologue video");
 
 playPauseButton.innerHTML =
   '<img src="/images/play.svg" alt="Play" style="width: 32px; height: 32px; margin-right: 50px;">';
@@ -16,13 +15,11 @@ subtitlesButton.innerHTML =
   '<img src="/images/subtitles.svg" alt="Subtitles" style="width: 32px; height: 32px;">';
 
 playPauseButton.addEventListener("click", () => {
-  if (audio.paused) {
-    audio.play();
+  if (video.paused) {
     video.play();
     playPauseButton.innerHTML =
       '<img src="/images/pause.svg" alt="Pause" style="width: 32px; height: 32px; margin-right: 50px;">';
   } else {
-    audio.pause();
     video.pause();
     playPauseButton.innerHTML =
       '<img src="/images/play.svg" alt="Play" style="width: 32px; height: 32px; margin-right: 50px;">';
@@ -30,8 +27,8 @@ playPauseButton.addEventListener("click", () => {
 });
 
 muteUnmuteButton.addEventListener("click", () => {
-  audio.muted = !audio.muted;
-  muteUnmuteButton.innerHTML = audio.muted
+  video.muted = !video.muted;
+  muteUnmuteButton.innerHTML = video.muted
     ? '<img src="/images/sound-off.svg" alt="mute" style="width: 32px; height: 32px;">'
     : '<img src="/images/sound-on.svg" alt="Unmute" style="width: 32px; height: 32px;">';
 });
@@ -40,18 +37,18 @@ subtitlesButton.addEventListener("click", () => {
   subtitlesMenu.classList.toggle("hidden");
 });
 
-audio.addEventListener("loadedmetadata", () => {
-  durationTimeDisplay.textContent = formatTime(audio.duration);
+video.addEventListener("loadedmetadata", () => {
+  durationTimeDisplay.textContent = formatTime(video.duration);
 });
 
-audio.addEventListener("timeupdate", () => {
-  audioTimeline.value = (audio.currentTime / audio.duration) * 100;
-  currentTimeDisplay.textContent = formatTime(audio.currentTime);
-  durationTimeDisplay.textContent = formatTime(audio.duration || 0);
+video.addEventListener("timeupdate", () => {
+  audioTimeline.value = (video.currentTime / video.duration) * 100;
+  currentTimeDisplay.textContent = formatTime(video.currentTime);
+  durationTimeDisplay.textContent = formatTime(video.duration || 0);
 });
 
 audioTimeline.addEventListener("input", () => {
-  audio.currentTime = (audioTimeline.value / 100) * audio.duration;
+  video.currentTime = (audioTimeline.value / 100) * video.duration;
 });
 
 function formatTime(seconds) {

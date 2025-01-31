@@ -1,6 +1,6 @@
-gsap.set("h1, button, .top-image, .bot-image", { opacity: 0 });
+gsap.set(".titledoc, .startbutton, .top-image, .bot-image", { opacity: 0 });
 gsap.delayedCall(1, () => {
-  const tl = gsap.timeline();
+  const tl = gsap.timeline({ repeat: 0 });
 
   tl.fromTo(
     ".top-image",
@@ -26,7 +26,7 @@ gsap.delayedCall(1, () => {
   );
 
   tl.fromTo(
-    ["h1", "button"],
+    [".titledoc", ".startbutton"],
     { scale: 0.5, y: 50, opacity: 0 },
     {
       scale: 1,

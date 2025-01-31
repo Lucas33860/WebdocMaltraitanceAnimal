@@ -3,14 +3,20 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Un web documentaire sur la maltraitance animale."
+    />
     <title>WEBDOC Maltraitance Animal</title>
     <link rel="stylesheet" href="/style/reset.css" />
     <link rel="stylesheet" href="/style/fonts.css" />
     <link rel="stylesheet" href="/style/loading.css" />
     <link rel="stylesheet" href="/style/styles.css" />
+    <link rel="icon" href="/images/favicon/patte.svg" type="image/x-icon" />
     <script src="/script/gsap.js" defer></script>
     <script src="/script/script.js" defer></script>
     <script src="/script/audio.js" defer></script>
+    <script src="/script/image.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
   </head>
   <body>
@@ -21,8 +27,8 @@
           alt="Haut du container"
           class="top-image"
         />
-        <h1>Brisés par la main de l’homme</h1>
-        <button id="start" class="startbutton">Continuer</button>
+        <h1 class="titledoc">Brisés par la main de l’homme</h1>
+        <button id="start" class="startbutton">Page Suivante</button>
         <img
           src="/images/bottom-contour.svg  "
           alt="Bas du container"
@@ -32,38 +38,24 @@
     </section>
     <section id="second-page" class="container">
       <div class="video-prologue">
-        <div
-          style="
-            border: 2px solid white;
-            width: 80%;
-            margin: 20px auto;
-            position: relative;
-          "
-        >
-          <video
-            src="/video/Funnycat.mp4"
-            muted
-            style="width: 100%; height: 80%; object-fit: cover"
-          ></video>
+        <div class="border-video">
+          <video src="/video/Funnycat.mp4"></video>
           <button
-            id="Leave"
+            class="leave"
+            id="leave"
             style="position: absolute; bottom: 10px; left: 10px"
           >
-            Quittez
+            Quitter
           </button>
           <button
-            id="Next1"
+            class="next1"
+            id="next1"
             style="position: absolute; bottom: 10px; right: 10px"
           >
-            Continuer
+            Page Suivante
           </button>
         </div>
       </div>
-      <audio
-        id="audio"
-        src="/audio/Prologue-audio.wav"
-        preload="metadata"
-      ></audio>
       <div class="audio-controls">
         <button id="play-pause">Play</button>
         <span class="time-display" id="current-time">0:00</span>
@@ -72,6 +64,87 @@
         <div class="right-controls">
           <button id="subtitles">Subtitles</button>
           <button id="mute-unmute">Mute</button>
+        </div>
+      </div>
+    </section>
+    <section id="third-page" class="container">
+      <div class="border-cadre">
+        <div class="size-cadre">
+          <button
+            class="leave"
+            id="leave2"
+            style="position: absolute; bottom: 10px; left: 10px"
+          >
+            Quitter
+          </button>
+          <img src="/images/top-contour.svg" alt="image haut" class="fade-in" />
+          <h1 class="fade-in">
+            Statut de l'animal : <br />
+            la transition de l’objet à l'être vivant
+          </h1>
+          <img
+            src="/images/bottom-contour.svg"
+            alt="image bas"
+            class="fade-in"
+          />
+          <p class="fade-in">Clique sur les pictos pour lancer l’experience</p>
+          <button
+            class="next2"
+            id="next2"
+            style="position: absolute; bottom: 10px; right: 10px"
+          >
+            Page Suivante
+          </button>
+        </div>
+      </div>
+    </section>
+    <section id="fourth-page" class="container">
+      <div class="border-cadre">
+        <div class="cadre-image">
+          <img
+            class="picto1"
+            src="/images/pictoanimal.svg"
+            alt="picto animaux
+            = objets"
+          />
+          <div id="text-container1" class="text-cadre">
+            <p>
+              Historiquement les animaux n’étaient rien d’autre que des objets.
+              Des possessions, des biens matériels, traités comme de simples
+              outils au service de l’Homme.
+            </p>
+          </div>
+          <img
+            class="picto2"
+            src="/images/pictorural.svg"
+            alt="picto code rural"
+          />
+          <div id="text-container2" class="text-cadre2">
+            <p>
+              En France, le Code civil plaçait les animaux au même rang que des
+              meubles ou des terrains, les privant de toute considération en
+              tant qu’êtres vivants.
+            </p>
+          </div>
+          <img
+            class="background-img"
+            src="/images/cat.png"
+            alt="photo de chat"
+          />
+          <button
+            class="leave"
+            id="leave3"
+            style="position: absolute; bottom: 10px; left: 10px"
+          >
+            Quitter
+          </button>
+          <button
+            class="next3"
+            id="next3"
+            style="position: absolute; bottom: 10px; right: 10px"
+          >
+            Page Suivante
+          </button>
         </div>
       </div>
     </section>
