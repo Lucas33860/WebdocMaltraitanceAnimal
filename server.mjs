@@ -49,7 +49,7 @@ const server = createServer(async (req, res) => {
   }
 });
 
-// Démarre un serveur HTTP sur le port 3000
-server.listen(3000, "127.0.0.1", () => {
-  console.log("Listening on http://127.0.0.1:3000");
+const PORT = process.env.PORT || 3000;
+server.listen(PORT, "0.0.0.0", () => {
+  console.log(`Listening on http://0.0.0.0:${PORT}`);
 });

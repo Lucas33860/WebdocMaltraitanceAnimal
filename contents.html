@@ -15,25 +15,48 @@
     <link rel="stylesheet" href="/style/styles.css" />
     <link rel="icon" href="/images/favicon/patte.svg" type="image/x-icon" />
     <script src="/script/contents/contents.js" defer></script>
+    <script src="/script/contents/chapterancor.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
   </head>
   <body>
     <section id="contents" class="container">
-      <div class="size-cadre">
-        <h1>Sommaire</h1>
-        <div class="button-chapter">
-          <button id="chapter1">Chapitre 1</button>
-          <button id="chapter2">Chapitre 2</button>
-          <button id="chapter3">Chapitre 3</button>
+      <section id="third-page" class="container">
+        <div class="border-cadre">
+          <div class="size-cadre">
+            <img
+              src="/images/top-contour.svg"
+              alt="image haut"
+              class="fade-in"
+            />
+            <h1 class="fade-in chapter1h1">Sommaire</h1>
+            <ul class="content-list fade-in">
+              <li id="chapter1start">
+                Chapitre 1 : Les animaux et l’éducation à la bienveillance
+              </li>
+              <li id="chapter2start">
+                Chapitre 2 : Comprendre et combattre la maltraitance animale
+              </li>
+              <li id="chapter3start">
+                Chapitre 3 : Du sauvetage à la réhabilitation
+              </li>
+              <li id="chapter4start">Chapitre 4 : Agir à son échelle</li>
+              <li id="creditstart">Crédits</li>
+            </ul>
+            <img
+              src="/images/bottom-contour.svg"
+              alt="image bas"
+              class="fade-in"
+            />
+          </div>
         </div>
-      </div>
+      </section>
     </section>
     <section id="chapter1index1" class="container">
       <div class="border-cadre">
         <div class="size-cadre-chapter">
           <button
             class="back"
-            id="back1"
+            id="backchapter1_1"
             style="position: absolute; bottom: 10px; left: 10px"
           >
             Quitter
