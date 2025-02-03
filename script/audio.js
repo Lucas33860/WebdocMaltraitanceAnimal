@@ -42,12 +42,9 @@ subtitlesButton.addEventListener("click", () => {
       subtitlesMenu.style.display = "block";
       subtitlesMenuVisible = true;
     } else {
-      subtitlesMenu.classList.toggle("hidden");
-      if (subtitlesMenu.classList.contains("hidden")) {
-        subtitlesMenu.style.display = "none";
-      } else {
-        subtitlesMenu.style.display = "block";
-      }
+      subtitlesMenu.classList.add("hidden");
+      subtitlesMenu.style.display = "none";
+      subtitlesMenuVisible = false;
     }
   } else {
     console.error("Subtitles menu element not found");
@@ -80,4 +77,17 @@ function setSubtitle(trackId) {
   for (let i = 0; i < tracks.length; i++) {
     tracks[i].mode = tracks[i].id === trackId ? "showing" : "hidden";
   }
+  // Close the subtitles menu after selecting a subtitle
+  subtitlesMenu.classList.add("hidden");
+  subtitlesMenu.style.display = "none";
+  subtitlesMenuVisible = false;
 }
+
+const back2Button = document.getElementById("leave");
+
+back2Button.addEventListener("click", () => {
+  video.currentTime = 0;
+  video.pause();
+  playPauseButton.innerHTML =
+    '<img src="/images/play.svg" alt="Play" style="width: 32px; height: 32px; margin-right: 50px;">';
+});
