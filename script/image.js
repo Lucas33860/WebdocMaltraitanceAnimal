@@ -27,6 +27,36 @@ document.getElementById("next4").onclick = function () {
   audio6.currentTime = 0;
 };
 
+document.getElementById("leave3").onclick = function () {
+  audio1.pause();
+  audio1.currentTime = 0;
+  audio2.pause();
+  audio2.currentTime = 0;
+  audio3.pause();
+  audio3.currentTime = 0;
+  audio4.pause();
+  audio4.currentTime = 0;
+  audio5.pause();
+  audio5.currentTime = 0;
+  audio6.pause();
+  audio6.currentTime = 0;
+};
+
+document.getElementById("leave4").onclick = function () {
+  audio1.pause();
+  audio1.currentTime = 0;
+  audio2.pause();
+  audio2.currentTime = 0;
+  audio3.pause();
+  audio3.currentTime = 0;
+  audio4.pause();
+  audio4.currentTime = 0;
+  audio5.pause();
+  audio5.currentTime = 0;
+  audio6.pause();
+  audio6.currentTime = 0;
+};
+
 const audio3 = new Audio("../audio/1976/Prise1.wav");
 const audio4 = new Audio("../audio/2015/Prise1.wav");
 const audio5 = new Audio("../audio/2023/Prise1.wav");
