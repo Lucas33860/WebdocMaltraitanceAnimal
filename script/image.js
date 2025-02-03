@@ -6,8 +6,8 @@ const textContainer4 = document.getElementById("text-container4");
 const textContainer5 = document.getElementById("text-container5");
 const textContainer6 = document.getElementById("text-container6");
 
-const audio1 = new Audio("../audio/pattemal/Prise1.wav");
-const audio2 = new Audio("../audio/coderural/Prise1.wav");
+const audio1 = new Audio("/audio/pattemal/Prise1.WAV");
+const audio2 = new Audio("/audio/coderural/Prise1.WAV");
 
 document.getElementById("next3").onclick = function () {
   audio1.pause();
@@ -57,10 +57,10 @@ document.getElementById("leave4").onclick = function () {
   audio6.currentTime = 0;
 };
 
-const audio3 = new Audio("../audio/1976/Prise1.wav");
-const audio4 = new Audio("../audio/2015/Prise1.wav");
-const audio5 = new Audio("../audio/2023/Prise1.wav");
-const audio6 = new Audio("../audio/patte/Prise1.wav");
+const audio3 = new Audio("/audio/1976/Prise1.WAV");
+const audio4 = new Audio("/audio/2015/Prise1.WAV");
+const audio5 = new Audio("/audio/2023/Prise1.WAV");
+const audio6 = new Audio("/audio/patte/Prise1.WAV");
 
 document.addEventListener("DOMContentLoaded", function () {
   document.querySelector(".picto1").onclick = function () {

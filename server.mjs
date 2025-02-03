@@ -1,12 +1,12 @@
 import { createServer } from "node:http";
-import { readFile } from "node:fs/promises";
+import { createReadStream, stat } from "node:fs/promises";
 import { join, extname } from "node:path";
 
 const server = createServer(async (req, res) => {
   try {
     const basePath = process.cwd(); // Chemin de base du projet
     const urlPath =
-      req.url.split("?")[0] === "/" ? "/index.html" : req.url.split("?")[0]; // Gère l'accueil comme index.html et ignore les paramètres de requête
+      req.url.split("?")[0] === "/" ? "/index.html" : req.url.split("?")[0];
     const filePath = join(basePath, urlPath);
 
     // Détermine le type MIME en fonction de l'extension du fichier
@@ -34,22 +34,40 @@ const server = createServer(async (req, res) => {
     };
     const contentType = mimeTypes[ext] || "application/octet-stream";
 
-    // Lit et envoie le fichier demandé
-    const fileContent = await readFile(filePath);
-    res.writeHead(200, { "Content-Type": contentType });
-    res.end(fileContent);
+    // Vérifie si le fichier existe et obtient sa taille
+    const stats = await stat(filePath);
+
+    // Gère les requêtes avec en-tête Range
+    if (req.headers.range) {
+      const range = req.headers.range;
+      const parts = range.replace(/bytes=/, "").split("-");
+      const start = parseInt(parts[0], 10);
+      const end = parts[1] ? parseInt(parts[1], 10) : stats.size - 1;
+      const chunkSize = end - start + 1;
+
+      const fileStream = createReadStream(filePath, { start, end });
+      res.writeHead(206, {
+        "Content-Range": `bytes ${start}-${end}/${stats.size}`,
+        "Accept-Ranges": "bytes",
+        "Content-Length": chunkSize,
+        "Content-Type": contentType,
+      });
+      fileStream.pipe(res);
+    } else {
+      // Lit et envoie le fichier complet si pas de Range
+      res.writeHead(200, {
+        "Content-Type": contentType,
+        "Content-Length": stats.size,
+      });
+      const fileStream = createReadStream(filePath);
+      fileStream.pipe(res);
+    }
   } catch (err) {
     // En cas d'erreur, retourne une page 404 ou une erreur 500
-    if (err.code === "ENOENT") {
-      res.writeHead(404, { "Content-Type": "text/plain" });
-      res.end("404: File not found");
-    } else {
-      res.writeHead(500, { "Content-Type": "text/plain" });
-      res.end("500: Internal Server Error");
-    }
+    res.writeHead(404, { "Content-Type": "text/plain" });
+    res.end("404: File not found");
   }
 });
-
 // Utiliser le port dynamique fourni par Scalingo
 const port = process.env.PORT || 3000;
 
