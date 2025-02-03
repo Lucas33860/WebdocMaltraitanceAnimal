@@ -1,5 +1,6 @@
 import { createServer } from "node:http";
-import { createReadStream, stat } from "node:fs/promises";
+import { createReadStream } from "node:fs";
+import { stat } from "node:fs/promises";
 import { join, extname } from "node:path";
 
 const server = createServer(async (req, res) => {
@@ -7,7 +8,7 @@ const server = createServer(async (req, res) => {
     const basePath = process.cwd(); // Chemin de base du projet
     const urlPath =
       req.url.split("?")[0] === "/" ? "/index.html" : req.url.split("?")[0];
-    const filePath = join(basePath, urlPath);
+    const filePath = join(basePath, urlPath.replace(/^\//, ""));
 
     // Détermine le type MIME en fonction de l'extension du fichier
     const ext = extname(filePath);
@@ -64,8 +65,13 @@ const server = createServer(async (req, res) => {
     }
   } catch (err) {
     // En cas d'erreur, retourne une page 404 ou une erreur 500
-    res.writeHead(404, { "Content-Type": "text/plain" });
-    res.end("404: File not found");
+    if (err.code === "ENOENT") {
+      res.writeHead(404, { "Content-Type": "text/plain" });
+      res.end("404: File not found");
+    } else {
+      res.writeHead(500, { "Content-Type": "text/plain" });
+      res.end("500: Internal Server Error");
+    }
   }
 });
 // Utiliser le port dynamique fourni par Scalingo
