@@ -49,7 +49,9 @@ const server = createServer(async (req, res) => {
   }
 });
 
-const PORT = process.env.PORT || 3000;
-server.listen(PORT, "0.0.0.0", () => {
-  console.log(`Listening on http://0.0.0.0:${PORT}`);
+// Utiliser le port dynamique fourni par Scalingo
+const port = process.env.PORT || 3000;
+
+server.listen(port, "0.0.0.0", () => {
+  console.log(`Listening on port ${port}`);
 });
