@@ -465,7 +465,7 @@ video {
     font-size: 10rem;
   }
 
-  button {
+  .buttonstart {
     width: 350px;
     height: 90px;
     padding: 40px 100px;
@@ -477,7 +477,7 @@ video {
     font-size: 7rem;
   }
 
-  button {
+  .buttonstart {
     width: 250px;
     height: 70px;
     padding: 30px 80px;
@@ -489,7 +489,7 @@ video {
     font-size: 5rem;
   }
 
-  button {
+  .buttonstart {
     width: 200px;
     height: 60px;
     padding: 20px 60px;

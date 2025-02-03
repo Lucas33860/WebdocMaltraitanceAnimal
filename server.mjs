@@ -5,7 +5,8 @@ import { join, extname } from "node:path";
 const server = createServer(async (req, res) => {
   try {
     const basePath = process.cwd(); // Chemin de base du projet
-    const urlPath = req.url === "/" ? "/index.html" : req.url; // Gère l'accueil comme index.html
+    const urlPath =
+      req.url.split("?")[0] === "/" ? "/index.html" : req.url.split("?")[0]; // Gère l'accueil comme index.html et ignore les paramètres de requête
     const filePath = join(basePath, urlPath);
 
     // Détermine le type MIME en fonction de l'extension du fichier
