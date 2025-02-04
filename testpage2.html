@@ -5,52 +5,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>WEBDOC Maltraitance Animal</title>
     <link rel="stylesheet" href="/style/reset.css" />
+    <link rel="stylesheet" href="/style/fonts.css" />
+    <link rel="stylesheet" href="/style/button.css" />
+    <link rel="stylesheet" href="/style/loading.css" />
     <link rel="stylesheet" href="/style/styles.css" />
-    <script src="/script/audio.js" defer></script>
+    <script src="/script/contents/julien.js" defer></script>
+    <script src="/script/gsap.js" defer></script>
+    <script src="/script/image.js" defer></script>
+    <script src="/script/script.js" defer></script>
+    <script src="/script/contents/contents.js" defer></script>
+    <script src="/script/contents/chapterancor.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
   </head>
   <body>
-    <section id="second-page" class="container">
-      <div class="video-prologue">
+    <section id="videojulien" class="container">
+      <div class="video-prologue-new">
         <div class="border-video">
-          <video src="/video/PrologueMotion.mp4">
+          <video src="/video/interviews/PrologueMotion.mp4">
             <track
               id="french-subtitles"
               label="Français"
               kind="subtitles"
               srclang="fr"
-              src="/subtitles/french.vtt"
+              src="/subtitles/motion/interviews/dion/french.vtt"
             />
             <track
               id="english-subtitles"
               label="English"
               kind="subtitles"
               srclang="en"
-              src="/subtitles/english.vtt"
+              src="/subtitles/motion/interviews/dion/english.vtt"
             />
             <track
               id="spanish-subtitles"
               label="Español"
               kind="subtitles"
               srclang="es"
-              src="/subtitles/spanish.vtt"
+              src="/subtitles/motion/interviews/dion/spanish.vtt"
             />
           </video>
           <button
+            onclick="document.querySelector('video').pause(); document.querySelector('video').currentTime = 0;"
             class="leave"
-            id="leave"
+            id="backchapter1_3"
             style="position: absolute; bottom: 10px; left: 10px"
           >
-            Quitter
+            Retour
           </button>
-          <button
-            class="next1"
-            id="next1"
-            style="position: absolute; bottom: 10px; right: 10px"
-          >
-            Page Suivante
-          </button>
-          <div class="subtitles-menu" id="language-menu">
+          <div class="subtitles-menu" id="language-menu-new">
             <button id="french" onclick="setSubtitle('french-subtitles')">
               Français
             </button>
@@ -64,14 +66,20 @@
         </div>
       </div>
       <div class="audio-controls">
-        <button id="play-pause" class="play-pause">Play</button>
-        <span class="time-display" id="current-time">0:00</span>
-        <input type="range" id="audio-timeline" min="0" max="100" value="0" />
-        <span class="time-display" id="duration-time">0:00</span>
+        <button id="play-pause-new" class="play-pause">Play</button>
+        <span class="time-display" id="current-time-new">0:00</span>
+        <input
+          type="range"
+          id="audio-timeline-new"
+          min="0"
+          max="100"
+          value="0"
+        />
+        <span class="time-display" id="duration-time-new">0:00</span>
         <div class="right-controls">
-          <button id="subtitles">Subtitles</button>
+          <button id="subtitles-new">Subtitles</button>
 
-          <button id="mute-unmute">Mute</button>
+          <button id="mute-unmute-new">Mute</button>
         </div>
       </div>
     </section>

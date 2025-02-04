@@ -107,6 +107,12 @@ body {
   margin: 0 10px;
 }
 
+#audio-timeline-new {
+  flex-grow: 1;
+  width: 80%;
+  margin: 0 10px;
+}
+
 .right-controls {
   display: flex;
   justify-content: center;
@@ -441,6 +447,116 @@ video {
   cursor: pointer;
 }
 
+.card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  &:hover {
+    cursor: pointer;
+    scale: 1.1;
+    transition: 1s;
+  }
+}
+
+.size-cadre-video {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 50px;
+  width: 100%;
+}
+
+.title-card {
+  width: 1290px;
+  font-family: BebasNeue;
+  font-size: 5rem;
+  text-align: center;
+  width: 90%;
+  color: #fff;
+  margin: 50px auto 20px;
+}
+
+.top-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 417px;
+  height: 394px;
+  flex-shrink: 0;
+  border-radius: 17.881px 17.881px 0px 0px;
+  background: var(--Neutural-Dark, #1d212e);
+}
+
+.bottom-card {
+  display: flex;
+  width: 417px;
+  flex-direction: column;
+  align-items: center;
+  gap: 17.881px;
+  border-radius: 0px 0px 17.881px 17.881px;
+  background: radial-gradient(
+    242.23% 241.86% at 53.72% -58.25%,
+    #404657 0%,
+    rgba(64, 70, 87, 0) 100%
+  );
+  backdrop-filter: blur(50.663333892822266px);
+  svg {
+    height: 0px;
+    align-self: stretch;
+    stroke-width: 1.238px;
+    stroke: var(--Neutural-Grey-1, #a7aab5);
+    opacity: 0.2;
+  }
+}
+
+.bottom-card-text {
+  display: flex;
+  flex-direction: column;
+  width: 381px;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.icon-play-video {
+  width: 100px;
+  height: 100px;
+  flex-shrink: 0;
+  stroke-width: 3.125px;
+  stroke: #fff;
+}
+
+.video-name {
+  color: var(--Neutural-White, #fff);
+  font-feature-settings: "liga" off;
+  font-family: Poppins;
+  font-size: 23.842px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 35.762px; /* 150% */
+}
+
+.video-artist {
+  width: 196.89px;
+  color: var(--Neutural-Grey-1, #a7aab5);
+  font-feature-settings: "liga" off;
+  font-size: 23.842px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 35.762px; /* 150% */
+}
+
+.text-video {
+  color: #fff;
+  width: 70%;
+  margin: 40px auto 0;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: normal;
+}
+
 /*  */
 /* ANIMATION CSS */
 /*  */
@@ -448,6 +564,17 @@ video {
 .fade-in {
   opacity: 0;
   animation: fadeInAnimation 3s ease-in-out forwards;
+}
+
+@keyframes fadeInAnimation {
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-in2 {
+  opacity: 0;
+  animation: fadeInAnimation 1s ease-in-out forwards;
 }
 
 @keyframes fadeInAnimation {
