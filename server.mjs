@@ -8,7 +8,10 @@ const server = createServer(async (req, res) => {
     const basePath = process.cwd(); // Chemin de base du projet
     const urlPath =
       req.url.split("?")[0] === "/" ? "/index.html" : req.url.split("?")[0];
-    const filePath = join(basePath, urlPath.replace(/^\//, ""));
+    const filePath = join(
+      basePath,
+      decodeURIComponent(urlPath.replace(/^\//, ""))
+    );
 
     // Détermine le type MIME en fonction de l'extension du fichier
     const ext = extname(filePath);
