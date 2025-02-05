@@ -15,18 +15,17 @@
     <link rel="stylesheet" href="./style/styles.css" />
     <link rel="icon" href="/images/favicon/patte.svg" type="image/x-icon" />
     <script src="/script/contents/chapterancor.js" defer></script>
-    <script src="/script/contents/contents.js" defer></script>
-    <script src="/script/contents/julien.js" defer></script>
-    <script src="/script/contents/dion.js" defer></script>
+    <script src="/script/contents/podcast.js" defer></script>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
   </head>
   <body>
     <section id="contents" class="container">
       <div class="border-cadre">
         <div class="size-cadre">
-          <img src="/images/top-contour.svg" alt="image haut" class="fade-in" />
-          <h1 class="fade-in chapter1h1">Sommaire</h1>
-          <ul class="content-list fade-in">
+          <img src="/images/top-contour.svg" alt="image haut" class="fade-in2" />
+          <h1 class="fade-in2 chapter1h1">Sommaire</h1>
+          <ul class="content-list fade-in2">
             <li id="chapter1start">
               Chapitre 1 : Les animaux et l’éducation à la bienveillance
             </li>
@@ -42,7 +41,7 @@
           <img
             src="/images/bottom-contour.svg"
             alt="image bas"
-            class="fade-in"
+            class="fade-in2"
           />
         </div>
       </div>
@@ -53,27 +52,24 @@
           <button
             class="back"
             id="backchapter1_1"
-            style="position: absolute; bottom: 10px; left: 10px"
+            style="position: absolute; bottom: 80px; left: 10px"
           >
             Quitter
           </button>
-          <img src="/images/top-contour.svg" alt="image haut" class="fade-in" />
-          <h1 class="fade-in">
+          <img src="/images/top-contour.svg" alt="image haut" class="fade-in2" />
+          <h1 class="fade-in2">
             Chapitre 1 : Les animaux et l’éducation à la bienveillance
           </h1>
-          <p class="fade-in">
-            Comment sensibiliser sur la maltraitance des animaux de compagnie ?
-          </p>
           <img
             src="/images/bottom-contour.svg"
             alt="image bas"
-            class="fade-in"
+            class="fade-in2"
           />
 
           <button
             class="chapter1next1"
             id="chapter1next1"
-            style="position: absolute; bottom: 10px; right: 10px"
+            style="position: absolute; bottom: 80px; right: 10px"
           >
             Page Suivante
           </button>
@@ -92,7 +88,7 @@
           </button>
 
           <div id="dion" class="card-container">
-            <div class="top-card">
+            <div class="top-card top-carddion">
               <svg
                 class="icon-play-video"
                 xmlns="http://www.w3.org/2000/svg"
@@ -118,13 +114,13 @@
             </div>
             <div class="bottom-card">
               <div class="bottom-card-text">
-                <p class="video-name">Suny sunsite</p>
-                <p class="video-artist">À travers leurs yeux</p>
+                <p class="video-name">Médiation animale engagée</p>
+                <p class="video-artist">Geoffroy DION</p>
               </div>
             </div>
           </div>
           <div id="julien" class="card-container">
-            <div class="top-card">
+            <div class="top-card top-cardjulien">
               <svg
                 class="icon-play-video"
                 xmlns="http://www.w3.org/2000/svg"
@@ -150,8 +146,8 @@
             </div>
             <div class="bottom-card">
               <div class="bottom-card-text">
-                <p class="video-name">Suny sunsite</p>
-                <p class="video-artist">À travers leurs yeux</p>
+                <p class="video-name">Soigner avec amour</p>
+                <p class="video-artist">Julien ANGEARD</p>
               </div>
             </div>
           </div>
@@ -174,126 +170,526 @@
     <section id="videodion" class="container">
       <div class="video-prologue">
         <div class="border-video">
-          <video src="/video/interviews/PrologueMotion.mp4">
-            <track
-              id="french-subtitles"
-              label="Français"
-              kind="subtitles"
-              srclang="fr"
-              src="/subtitles/motion/interviews/dion/french.vtt"
-            />
-            <track
-              id="english-subtitles"
-              label="English"
-              kind="subtitles"
-              srclang="en"
-              src="/subtitles/motion/interviews/dion/english.vtt"
-            />
-            <track
-              id="spanish-subtitles"
-              label="Español"
-              kind="subtitles"
-              srclang="es"
-              src="/subtitles/motion/interviews/dion/spanish.vtt"
-            />
-          </video>
+            <iframe
+            id="prologue"
+            style="width: 100%; height: 100%"
+            src="https://www.youtube.com/embed/zQLs9Tyy9Zk?rel=0&modestbranding=0&controls=1&showinfo=0&disablekb=0"
+            frameborder="0"
+            allow="accelerometer; clipboard-write; encrypted-media"
+            allowfullscreen
+            ></iframe>
           <button
-            onclick="document.querySelector('video').pause(); document.querySelector('video').currentTime = 0;"
             class="leave"
-            id="backchapter1_3"
-            style="position: absolute; bottom: 10px; left: 10px"
+            id="leavedion"
+            style="position: absolute; bottom: 80px; left: 10px"
           >
             Retour
           </button>
-          <div class="subtitles-menu" id="language-menu">
-            <button id="french" onclick="setSubtitle('french-subtitles')">
-              Français
-            </button>
-            <button id="english" onclick="setSubtitle('english-subtitles')">
-              English
-            </button>
-            <button id="spanish" onclick="setSubtitle('spanish-subtitles')">
-              Español
-            </button>
-          </div>
-        </div>
-      </div>
-      <div class="audio-controls">
-        <button id="play-pause" class="play-pause">Play</button>
-        <span class="time-display" id="current-time">0:00</span>
-        <input type="range" id="audio-timeline" min="0" max="100" value="0" />
-        <span class="time-display" id="duration-time">0:00</span>
-        <div class="right-controls">
-          <button id="subtitles">Subtitles</button>
-
-          <button id="mute-unmute">Mute</button>
-        </div>
-      </div>
     </section>
     <section id="videojulien" class="container">
-      <div class="video-prologue-new">
+      <div class="video-prologue">
         <div class="border-video">
-          <video src="/video/interviews/PrologueMotion.mp4">
-            <track
-              id="french-subtitles"
-              label="Français"
-              kind="subtitles"
-              srclang="fr"
-              src="/subtitles/motion/interviews/dion/french.vtt"
-            />
-            <track
-              id="english-subtitles"
-              label="English"
-              kind="subtitles"
-              srclang="en"
-              src="/subtitles/motion/interviews/dion/english.vtt"
-            />
-            <track
-              id="spanish-subtitles"
-              label="Español"
-              kind="subtitles"
-              srclang="es"
-              src="/subtitles/motion/interviews/dion/spanish.vtt"
-            />
-          </video>
+            <iframe
+            id="prologue"
+            style="width: 100%; height: 100%"
+            src="https://www.youtube.com/embed/zQLs9Tyy9Zk?rel=0&modestbranding=0&controls=1&showinfo=0&disablekb=0"
+            frameborder="0"
+            allow="accelerometer; clipboard-write; encrypted-media"
+            allowfullscreen
+            ></iframe>
           <button
-            onclick="document.querySelector('video').pause(); document.querySelector('video').currentTime = 0;"
             class="leave"
-            id="backchapter1_4"
+            id="leavejulien"
+            style="position: absolute; bottom: 80px; left: 10px"
+          >
+            Retour
+          </button>
+    </section>
+    <section id="chapter2index1" class="container">
+      <div class="border-cadre">
+        <div class="size-cadre-chapter">
+          <button
+            class="back"
+            id="backchapter2_1"
+            style="position: absolute; bottom: 10px; left: 10px"
+          >
+            Quitter
+          </button>
+          <img src="/images/top-contour.svg" alt="image haut" class="fade-in2" />
+          <h1 class="fade-in2">
+            Chapitre 2 : Comprendre et combattre la maltraitance animale
+          </h1>
+          <img
+            src="/images/bottom-contour.svg"
+            alt="image bas"
+            class="fade-in2"
+          />
+
+          <button
+            class="chapter2next1"
+            id="chapter2next1"
+            style="position: absolute; bottom: 10px; right: 10px"
+          >
+            Page Suivante
+          </button>
+        </div>
+      </div>
+    </section>
+    <section id="chapter2index2" class="container">
+        <div class="border-cadre">
+          <button
+            class="back"
+            id="backchapter2_2"
+            style="position: absolute; bottom: 10px; left: 10px"
+          >
+            Quitter         
+          </button>
+          <div class="global-podcast">
+            <h1 class="podcast-h1">Écoutez leurs voix</h1>
+            <div class="podcast-container">
+              <div id="animaux" class="podcast-card">
+                <div class="top-podcast back-pod1"></div>
+                <div class="bot-podcast">
+                  <h2 class="podcasth2">Podcast – La parole aux animaux</h2>
+                  <p class="podcastp">À travers leurs yeux</p>
+                </div>
+              </div>
+              <div id="sauveur" class="podcast-card">
+                <div class="top-podcast back-pod2"></div>
+                <div class="bot-podcast">
+                  <h2 class="podcasth2">Podcast – Échos des sauveurs</h2>
+                  <p class="podcastp">À travers leurs yeux</p>
+                </div>
+              </div>
+            </div>
+            <p class="dialogpodcast">
+              Découvrez les récits bouleversants des animaux rescapés ou les
+              témoignages de celles et ceux qui se battent pour eux.
+            </p>
+          </div>
+        </div>
+    </section>
+    <section id="podcast-animaux1" class="container">
+        <div class="border-cadre">
+          <button
+            class="back"
+            id="backchapter2_3"
             style="position: absolute; bottom: 10px; left: 10px"
           >
             Retour
           </button>
-          <div class="subtitles-menu" id="language-menu-new">
-            <button id="french" onclick="setSubtitle('french-subtitles')">
-              Français
+          <button
+            class="chapter2next2"
+            id="chapter2next2"
+            style="position: absolute; bottom: 10px; right: 10px"
+          >
+            Chapitre Suivant
+          </button>
+          <h1 class="podcast-h1">Podcast - La parole aux animaux</h1>
+          <div class="card-container-animaux">
+            <div id="medor" class="card-animaux">
+              <div class="top-card-animaux medor"></div>
+              <div class="bot-card-animaux">
+                <h2 class="h2podcastanimaux">Médor</h2>
+                <p class="ppodcastanimaux">À travers leurs yeux</p>
+              </div>
+            </div>
+            <div id="hermes" class="card-animaux">
+              <div class="top-card-animaux hermes"></div>
+              <div class="bot-card-animaux">
+                <h2 class="h2podcastanimaux">Hermès</h2>
+                <p class="ppodcastanimaux">À travers leurs yeux</p>
+              </div>
+            </div>
+            <div id="pito" class="card-animaux">
+              <div class="top-card-animaux pito"></div>
+              <div class="bot-card-animaux">
+                <h2 class="h2podcastanimaux">Pito</h2>
+                <p class="ppodcastanimaux">À travers leurs yeux</p>
+              </div>
+            </div>
+            <div id="cocotte" class="card-animaux">
+              <div class="top-card-animaux cocotte"></div>
+              <div class="bot-card-animaux">
+                <h2 class="h2podcastanimaux">Cocotte</h2>
+                <p class="ppodcastanimaux">À travers leurs yeux</p>
+              </div>
+            </div>
+            <div id="chatton" class="card-animaux">
+              <div class="top-card-animaux chatton"></div>
+              <div class="bot-card-animaux">
+                <h2 class="h2podcastanimaux">Chatton</h2>
+                <p class="ppodcastanimaux">À travers leurs yeux</p>
+              </div>
+            </div>
+          </div>
+        </div>
+    </section>
+    <section id="podcast-medor" class="container podcast-medor">
+      <div class="border-cadre-podcast medor-podcast-background">
+        <div class="separate">
+          <div class="left-part">
+            <button
+              class="back"
+              id="backchapter2_4"
+              style="position: absolute; bottom: 10px; left: 10px"
+            >
+              Retour
             </button>
-            <button id="english" onclick="setSubtitle('english-subtitles')">
-              English
-            </button>
-            <button id="spanish" onclick="setSubtitle('spanish-subtitles')">
-              Español
-            </button>
+            <div class="left-content">
+              <img src="/images/Medor-podcast.png" alt="Photo  Médor" />
+              <h1>Médor, un chien de chasse abandonné.</h1>
+              <p>
+                Privé d'affection et laissé pour compte après des années de
+                loyauté.
+              </p>
+              <img id="start-medor" class="start-medor" src="/images/play.svg" alt="Bouton Play" />
+              <audio id="audiomedor" src="/audio/patte/Prise1.WAV"></audio>
+            </div>
+          </div>
+          <div class="right-part">
+            <div class="right-content">
+              <h1>TRANSCRIPTION</h1>
+              <p>
+                Je m’appelle Médor. Avant, j’étais un chien de chasse, toujours
+                prêt à courir, à rapporter, à obéir. <br />
+                Je pensais qu’elle m’aimait… jusqu’au jour où elle ne s’est plus
+                occupée de moi. <br />
+                <br />
+                J’avais faim. Je grattais la porte, mais elle ne s’ouvrait plus.
+                Mes gamelles restaient vides. <br />
+                Je n’étais plus utile. <br />
+                Alors elle m’a laissée là, dans un champ, sans même un regard en
+                arrière. J’ai attendu. Longtemps. <br />
+                <br />
+                J’ai marché, j’ai pleuré, j’ai cherché… Un regard, une main
+                tendue… Rien. Seulement le froid, la faim, et cette question qui
+                tourne en boucle dans ma tête : Qu’est-ce que j’ai fait de mal ?
+                <br />
+                <br />
+                Un jour, quelqu’un m’a vu. Quelqu’un qui n’a pas détourné les
+                yeux. Peut-être… peut-être que cette fois, on ne m’oubliera pas.
+              </p>
+              <h1>Ecoutez leurs témoignages :</h1>
+              <div class="podcast-list">
+                <img
+                id="hermes-podcast"
+                class="hermes-podcast"
+                src="/images/podcast2.png"
+                alt="Podcast2"
+              />
+              <img
+                id="pito-podcast"
+                class="pito-podcast"
+                src="/images/podcast3.png"
+                alt="Podcast3"
+              />
+              <img
+                id="cocotte-podcast"
+                class="cocotte-podcast"
+                src="/images/podcast4.png"
+                alt="Podcast4"
+              />
+              <img
+                id="chatton-podcast"
+                class="chatton-podcast"
+                src="/images/podcast5.png"
+                alt="Podcast5"
+              />
+              </div>
+            </div>
           </div>
         </div>
       </div>
-      <div class="audio-controls">
-        <button id="play-pause-new" class="play-pause">Play</button>
-        <span class="time-display" id="current-time-new">0:00</span>
-        <input
-          type="range"
-          id="audio-timeline-new"
-          min="0"
-          max="100"
-          value="0"
-        />
-        <span class="time-display" id="duration-time-new">0:00</span>
-        <div class="right-controls">
-          <button id="subtitles-new">Subtitles</button>
+    </section>
+    <section id="podcast-hermes" class="container podcast-hermes">
+      <div class="border-cadre-podcast biboule-podcast-background">
+        <div class="separate">
+          <div class="left-part">
+            <button
+              class="back"
+              id="backchapter2_5"
+              style="position: absolute; bottom: 10px; left: 10px"
+            >
+              Retour
+            </button>
+            <div class="left-content">
+              <img src="/images/podcast2.png" alt="Photo Hermes" />
+              <h1>Hermès, un lapin négligé.</h1>
+              <p>
+                Un lapin négligé, oublié dans un coin jusqu’à ce que la faim et
+                la solitude deviennent son quotidien.
+              </p>
+              <img id="start-biboule" class="start-biboule" src="/images/play.svg" alt="Bouton Play" />
+              <audio id="audiobiboule" src="/audio/patte/Prise1.WAV"></audio>
+            </div>
+          </div>
+          <div class="right-part">
+            <div class="right-content">
+              <h1>TRANSCRIPTION</h1>
+              <p>
+                Je m’appelle Hermès. <br />
+                J’étais une petite lapine toute douce, un cadeau, une peluche
+                vivante qu’on a trouvée mignonne… au début. <br />
+                <br />
 
-          <button id="mute-unmute-new">Mute</button>
+                Mais un jour, elle ne s’est plus occupée de moi. Ma cage est
+                restée fermée, mes gamelles de plus en plus vides, ma litière
+                toujours sale. <br />
+                Plus de caresses, plus de mots doux… Juste l’ombre de sa
+                présence, qui passait sans me voir. <br />
+                <br />
+
+                J’ai attendu. J’ai gratté. J’ai tendu l’oreille… Mais personne
+                ne répondait. <br />
+                La faim est devenue une habitude. <br />
+                La solitude, mon seul compagnon.  <br />
+                <br />
+                Un jour, quelqu’un m'est sorti de là. Quelqu’un qui a compris
+                que j’existais encore… Peut-être que cette fois, on prendra soin
+                de moi.
+              </p>
+              <h1>Ecoutez leurs témoignages :</h1>
+              <div class="podcast-list">
+                <img
+                  id="medor-podcast"
+                  class="medor-podcast"
+                  src="/images/Medor-podcast.png"
+                  alt="Podcast2"
+                />
+                <img
+                  id="pito-podcast"
+                  class="pito-podcast"
+                  src="/images/podcast3.png"
+                  alt="Podcast3"
+                />
+                <img
+                  id="cocotte-podcast"
+                  class="cocotte-podcast"
+                  src="/images/podcast4.png"
+                  alt="Podcast4"
+                />
+                <img
+                  id="chatton-podcast"
+                  class="chatton-podcast"
+                  src="/images/podcast5.png"
+                  alt="Podcast5"
+                />
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
+    <section id="podcast-pito" class="container podcast-pito">
+        <div class="border-cadre-podcast pito-podcast-background">
+          <div class="separate">
+            <div class="left-part">
+              <button
+                class="back"
+                id="backchapter2_6"
+                style="position: absolute; bottom: 10px; left: 10px"
+              >
+                Retour
+              </button>
+              <div class="left-content">
+                <img src="/images/podcast3.png" alt="Photo Pito" />
+                <h1>Pito, l’âne sous alimenté.</h1>
+                <p>
+                  Un âne au regard doux, survivant d’une vie de labeur et de
+                  maltraitance, enfin recueilli dans un havre de paix.
+                </p>
+                <img id="start-pito" class="start-pito" src="/images/play.svg" alt="Bouton Play" />
+                <audio id="audiopito" src="/audio/patte/Prise1.WAV"></audio>
+              </div>
+            </div>
+            <div class="right-part">
+              <div class="right-content">
+                <h1>TRANSCRIPTION</h1>
+                <p>
+                  Je m’appelle Pito… J’ai travaillé toute ma vie. Porter, tirer,
+                  avancer, sans jamais m’arrêter. <br /><br />
+  
+                  J’avais faim. Je ne pouvais plus manger… Mes sabots étaient
+                  tellement long que j’avais du mal à marcher. Je devenais
+                  invisible, juste une ombre parmi les autres. <br /><br />
+  
+                  J’ai attendu… jusqu’à ce qu’on m’abandonne. Plus d’ordre, plus
+                  de coups… Mais aussi plus personne. <br />
+                  <br />
+  
+                  Et puis, une main s’est tendue. Une voix douce m’a parlé. Pour
+                  la première fois, je n’étais plus un outil. J’étais… un être
+                  vivant. Les enfants viennent désormais me rendre visite et me
+                  donner de l’amour.
+                </p>
+                <h1>Ecoutez leurs témoignages :</h1>
+                <div class="podcast-list">
+                  <img
+                    id="medor-podcast"
+                    class="medor-podcast"
+                    src="/images/Medor-podcast.png"
+                    alt="Podcast1"
+                  />
+                  <img
+                    id="hermes-podcast"
+                    class="hermes-podcast"
+                    src="/images/podcast2.png"
+                    alt="Podcast2"
+                  />
+                  <img
+                    id="cocotte-podcast"
+                    class="cocotte-podcast"
+                    src="/images/podcast4.png"
+                    alt="Podcast4"
+                  />
+                  <img
+                    id="chatton-podcast"
+                    class="chatton-podcast"
+                    src="/images/podcast5.png"
+                    alt="Podcast5"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </section>
+    <section id="podcast-cocotte" class="container podcast-cocotte">
+        <div class="border-cadre-podcast cocotte-podcast-background">
+          <div class="separate">
+            <div class="left-part">
+              <button
+                class="back"
+                id="backchapter2_7"
+                style="position: absolute; bottom: 10px; left: 10px"
+              >
+                Retour
+              </button>
+              <div class="left-content">
+                <img src="/images/podcast4.png" alt="Photo Cocotte" />
+                <h1>Cocotte, une poule casanière.</h1>
+                <p>
+                  Une poule autrefois exploitée pour sa ponte, découvrant la liberté après une vie en cage.
+                </p>
+                <img id="start-cocotte" class="start-cocotte" src="/images/play.svg" alt="Bouton Play" />
+                <audio id="audiococotte" src="/audio/patte/Prise1.WAV"></audio>
+              </div>
+            </div>
+            <div class="right-part">
+              <div class="right-content">
+                <h1>TRANSCRIPTION</h1>
+                <p>
+                  Je m’appelle Pito… J’ai travaillé toute ma vie. Porter, tirer, avancer, sans jamais m’arrêter. <br> <br>
+
+J’avais faim. Je ne pouvais plus manger… Mes sabots étaient tellement long que j’avais du mal à marcher. Je devenais invisible, juste une ombre parmi les autres. <br> <br>
+
+J’ai attendu… jusqu’à ce qu’on m’abandonne. Plus d’ordre, plus de coups… Mais aussi plus personne. <br> <br>
+
+Et puis, une main s’est tendue. Une voix douce m’a parlé. Pour la première fois, je n’étais plus un outil. J’étais… un être vivant. Les enfants viennent désormais me rendre visite et me donner de l’amour.
+
+                </p>
+                <h1>Ecoutez leurs témoignages :</h1>
+                <div class="podcast-list">
+                  <img
+                    id="medor-podcast"
+                    class="medor-podcast"
+                    src="/images/Medor-podcast.png"
+                    alt="Podcast1"
+                  />
+                  <img
+                    id="hermes-podcast"
+                    class="hermes-podcast"
+                    src="/images/podcast2.png"
+                    alt="Podcast2"
+                  />
+                  <img
+                    id="pito-podcast"
+                    class="pito-podcast"
+                    src="/images/podcast3.png"
+                    alt="Podcast3"
+                  />
+                  <img
+                    id="chatton-podcast"
+                    class="chatton-podcast"
+                    src="/images/podcast5.png"
+                    alt="Podcast5"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </section>
+    <section id="podcast-chatton" class="container podcast-chatton">
+      <div class="border-cadre-podcast chatton-podcast-background">
+        <div class="separate">
+          <div class="left-part">
+            <button
+              class="back"
+              id="backchapter2_8"
+              style="position: absolute; bottom: 10px; left: 10px"
+            >
+              Retour
+            </button>
+            <div class="left-content">
+              <img src="/images/podcast5.png" alt="Photo Chatton" />
+              <h1>Chatton, abandonné dans une fôret.</h1>
+              <p>
+                Un petit félin abandonné, errant seul dans l'attente d'une caresse qui ne viendra plus.
+              </p>
+              <img id="start-chatton" class="start-chatton" src="/images/play.svg" alt="Bouton Play" />
+              <audio id="audiochatton" src="/audio/patte/Prise1.WAV"></audio>
+            </div>
+          </div>
+          <div class="right-part">
+            <div class="right-content">
+              <h1>TRANSCRIPTION</h1>
+              <p>
+                Je m’appelle Chatton. J’avais une maison, une couverture douce, une main qui me caressait. <br> <br>
+
+Puis un jour, on m’a emmené en voiture. J’étais content… jusqu’à ce que la porte s’ouvre. <br> <br>
+
+Le sol était froid, l’odeur inconnue. J’ai attendu… Mais la voiture est partie, sans moi. <br> <br>
+
+J’ai marché. J’ai miaulé. Personne n’a répondu. <br>
+La nuit est tombée, la faim est venue… et moi, je suis resté là, un chaton perdu dans une forêt trop grande. <br> <br>
+
+Un jour, quelqu’un m’a trouvé. Quelqu’un qui ne m’a pas laissé derrière. <br>
+Peut-être… que cette fois, j’ai trouvé ma vraie maison."
+              </p>
+              <h1>Ecoutez leurs témoignages :</h1>
+              <div class="podcast-list">
+                <img
+                  id="medor-podcast"
+                  class="medor-podcast"
+                  src="/images/Medor-podcast.png"
+                  alt="Podcast1"
+                />
+                <img
+                  id="hermes-podcast"
+                  class="hermes-podcast"
+                  src="/images/podcast2.png"
+                  alt="Podcast2"
+                />
+                <img
+                  id="pito-podcast"
+                  class="pito-podcast"
+                  src="/images/podcast3.png"
+                  alt="Podcast3"
+                />
+                <img
+                  id="cocotte-podcast"
+                  class="cocotte-podcast"
+                  src="/images/podcast4.png"
+                  alt="Podcast5"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="podcast-sauveur1" class="container"></section>
   </body>
 </html>

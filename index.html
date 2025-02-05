@@ -40,67 +40,28 @@
     <section id="second-page" class="container">
       <div class="video-prologue">
         <div class="border-video">
-          <video src="/video/PrologueMotion.mp4">
-            <track
-              id="french-subtitles"
-              label="Français"
-              kind="subtitles"
-              srclang="fr"
-              src="/subtitles/french.vtt"
-            />
-            <track
-              id="english-subtitles"
-              label="English"
-              kind="subtitles"
-              srclang="en"
-              src="/subtitles/english.vtt"
-            />
-            <track
-              id="spanish-subtitles"
-              label="Español"
-              kind="subtitles"
-              srclang="es"
-              src="/subtitles/spanish.vtt"
-            />
-          </video>
+            <iframe
+            id="prologue"
+            style="width: 100%; height: 100%"
+            src="https://www.youtube.com/embed/zQLs9Tyy9Zk?rel=0&modestbranding=0&controls=1&showinfo=0&disablekb=0"
+            frameborder="0"
+            allow="accelerometer; clipboard-write; encrypted-media"
+            allowfullscreen
+            ></iframe>
           <button
             class="leave"
             id="leave"
-            style="position: absolute; bottom: 10px; left: 10px"
+            style="position: absolute; bottom: 80px; left: 10px"
           >
             Quitter
           </button>
           <button
             class="next1"
             id="next1"
-            style="position: absolute; bottom: 10px; right: 10px"
+            style="position: absolute; bottom: 80px; right: 10px"
           >
             Page Suivante
           </button>
-          <div class="subtitles-menu" id="language-menu">
-            <button id="french" onclick="setSubtitle('french-subtitles')">
-              Français
-            </button>
-            <button id="english" onclick="setSubtitle('english-subtitles')">
-              English
-            </button>
-            <button id="spanish" onclick="setSubtitle('spanish-subtitles')">
-              Español
-            </button>
-          </div>
-        </div>
-      </div>
-      <div class="audio-controls">
-        <button id="play-pause" class="play-pause">Play</button>
-        <span class="time-display" id="current-time">0:00</span>
-        <input type="range" id="audio-timeline" min="0" max="100" value="0" />
-        <span class="time-display" id="duration-time">0:00</span>
-        <div class="right-controls">
-          <button id="subtitles">Subtitles</button>
-
-          <button id="mute-unmute">Mute</button>
-        </div>
-      </div>
     </section>
     <section id="third-page" class="container">
       <div class="border-cadre">
