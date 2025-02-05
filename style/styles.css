@@ -864,6 +864,113 @@ iframe {
     cursor: pointer;
   }
 }
+
+.global-temoin {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+.global-temoin h1 {
+  color: #fff;
+  font-size: 80px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  padding-bottom: 50px;
+}
+
+.container-video-temoin {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+  width: 100%;
+  height: 60%;
+  padding-bottom: 100px;
+}
+
+.card-temoin {
+  &:hover {
+    cursor: pointer;
+    scale: 1.1;
+    transition: 1s;
+  }
+}
+.temoin1 {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  height: 100%;
+  color: #fff;
+}
+
+.temoin2 {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  height: 100%;
+  color: #fff;
+}
+
+.top-temoin {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+  height: 75%;
+  margin: auto;
+}
+
+.bot-temoin {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 60%;
+  height: 25%;
+  margin: auto;
+  border-radius: 0px 0px 18.389px 18.389px;
+  background: radial-gradient(
+    242.23% 241.86% at 53.72% -58.25%,
+    #404657 100%,
+    rgba(64, 70, 87, 0) 100%
+  );
+  backdrop-filter: blur(52.101776123046875px);
+  h2 {
+    margin-top: 10px;
+    margin-left: 10px;
+    color: var(--Neutural-White, #fff);
+    font-feature-settings: "liga" off;
+    font-size: 24.518px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 36.778px; /* 150% */
+  }
+  p {
+    margin-left: 10px;
+    color: var(--Neutural-Grey-1, #a7aab5);
+    font-feature-settings: "liga" off;
+    font-size: 24.518px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 36.778px; /* 150% */
+  }
+}
+
+.back-temoin1 {
+  border-radius: 18.412px 18.412px 0 0;
+  background: url(/images/temoignage1.png) no-repeat center center;
+  background-size: cover;
+}
+
+.back-temoin2 {
+  border-radius: 18.412px 18.412px 0 0;
+  background: url(/images/temoignage2.png) no-repeat center center;
+  background-size: cover;
+}
+
 /*  */
 /* ANIMATION CSS */
 /*  */

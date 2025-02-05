@@ -11,6 +11,8 @@ document.getElementById("podcast-hermes").style.display = "none";
 document.getElementById("podcast-pito").style.display = "none";
 document.getElementById("podcast-cocotte").style.display = "none";
 document.getElementById("podcast-chatton").style.display = "none";
+document.getElementById("temoignage1").style.display = "none";
+document.getElementById("temoignage2").style.display = "none";
 
 const addEventListenerIfExists = (id, event, handler) => {
   const element = document.getElementById(id);
@@ -31,11 +33,6 @@ addEventListenerIfExists("chapter2start", "click", function () {
 
 addEventListenerIfExists("chapter3start", "click", function () {
   document.getElementById("chapter3index1").style.display = "block";
-  document.getElementById("contents").style.display = "none";
-});
-
-addEventListenerIfExists("chapter4start", "click", function () {
-  document.getElementById("chapter4index1").style.display = "block";
   document.getElementById("contents").style.display = "none";
 });
 
@@ -104,6 +101,11 @@ addEventListenerIfExists("backchapter2_8", "click", function () {
   document.getElementById("podcast-animaux1").style.display = "block";
 });
 
+addEventListenerIfExists("backchapter2_9", "click", function () {
+  document.getElementById("podcast-sauveur1").style.display = "none";
+  document.getElementById("chapter2index2").style.display = "block";
+});
+
 addEventListenerIfExists("backchapter3_1", "click", function () {
   document.getElementById("chapter3index1").style.display = "none";
   document.getElementById("contents").style.display = "block";
@@ -136,6 +138,11 @@ addEventListenerIfExists("chapter2next1", "click", function () {
 
 addEventListenerIfExists("chapter2next2", "click", function () {
   document.getElementById("chapter2index2").style.display = "none";
+  document.getElementById("chapter3index1").style.display = "block";
+});
+
+addEventListenerIfExists("chapter2next3", "click", function () {
+  document.getElementById("podcast-sauveur1").style.display = "none";
   document.getElementById("chapter3index1").style.display = "block";
 });
 
@@ -192,6 +199,16 @@ addEventListenerIfExists("cocotte", "click", function () {
 addEventListenerIfExists("chatton", "click", function () {
   document.getElementById("podcast-animaux1").style.display = "none";
   document.getElementById("podcast-chatton").style.display = "block";
+});
+
+addEventListenerIfExists("temoin1", "click", function () {
+  document.getElementById("podcast-sauveur1").style.display = "none";
+  document.getElementById("temoignage1").style.display = "block";
+});
+
+addEventListenerIfExists("temoin2", "click", function () {
+  document.getElementById("podcast-sauveur1").style.display = "none";
+  document.getElementById("temoignage2").style.display = "block";
 });
 
 // Podcast intern ancrage
