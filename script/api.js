@@ -57,3 +57,39 @@ document.querySelectorAll("#backasv").forEach((button) => {
     }
   });
 });
+
+document.querySelectorAll("#backguerrir").forEach((button) => {
+  button.addEventListener("click", () => {
+    const iframes = document.querySelectorAll("iframe");
+    for (const iframe of iframes) {
+      iframe.contentWindow.postMessage(
+        '{"event":"command","func":"pauseVideo","args":[]}',
+        "https://www.youtube.com"
+      );
+    }
+  });
+});
+
+document.querySelectorAll("#backpassion").forEach((button) => {
+  button.addEventListener("click", () => {
+    const iframes = document.querySelectorAll("iframe");
+    for (const iframe of iframes) {
+      iframe.contentWindow.postMessage(
+        '{"event":"command","func":"pauseVideo","args":[]}',
+        "https://www.youtube.com"
+      );
+    }
+  });
+});
+
+document.querySelectorAll("#backlutter").forEach((button) => {
+  button.addEventListener("click", () => {
+    const iframes = document.querySelectorAll("iframe");
+    for (const iframe of iframes) {
+      iframe.contentWindow.postMessage(
+        '{"event":"command","func":"pauseVideo","args":[]}',
+        "https://www.youtube.com"
+      );
+    }
+  });
+});
