@@ -1131,6 +1131,18 @@ iframe {
   color: white;
   margin: 50px 0;
 }
+
+.credit-global-container .logoimg {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+.logommi {
+  display: flex;
+  justify-content: flex-end;
+  width: 250px;
+  height: 150px;
+}
 /*  */
 /* ANIMATION CSS */
 /*  */
