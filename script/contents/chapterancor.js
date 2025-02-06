@@ -15,6 +15,10 @@ document.getElementById("temoignage1").style.display = "none";
 document.getElementById("temoignage2").style.display = "none";
 document.getElementById("chapter3index1").style.display = "none";
 document.getElementById("chapter3index2").style.display = "none";
+document.getElementById("luttervideo").style.display = "none";
+document.getElementById("passionvideo").style.display = "none";
+document.getElementById("guerrirvideo").style.display = "none";
+document.getElementById("creditindex1").style.display = "none";
 
 const addEventListenerIfExists = (id, event, handler) => {
   const element = document.getElementById(id);
@@ -227,6 +231,41 @@ addEventListenerIfExists("temoin2", "click", function () {
 
 addEventListenerIfExists("chapter3next1", "click", function () {
   document.getElementById("chapter3index1").style.display = "none";
+  document.getElementById("chapter3index2").style.display = "block";
+});
+
+addEventListenerIfExists("chapter3next2", "click", function () {
+  document.getElementById("chapter3index2").style.display = "none";
+  document.getElementById("creditindex1").style.display = "block";
+});
+
+addEventListenerIfExists("lutter", "click", function () {
+  document.getElementById("chapter3index2").style.display = "none";
+  document.getElementById("luttervideo").style.display = "block";
+});
+
+addEventListenerIfExists("passion", "click", function () {
+  document.getElementById("chapter3index2").style.display = "none";
+  document.getElementById("passionvideo").style.display = "block";
+});
+
+addEventListenerIfExists("guerrir", "click", function () {
+  document.getElementById("chapter3index2").style.display = "none";
+  document.getElementById("guerrirvideo").style.display = "block";
+});
+
+addEventListenerIfExists("backlutter", "click", function () {
+  document.getElementById("luttervideo").style.display = "none";
+  document.getElementById("chapter3index2").style.display = "block";
+});
+
+addEventListenerIfExists("backpassion", "click", function () {
+  document.getElementById("passionvideo").style.display = "none";
+  document.getElementById("chapter3index2").style.display = "block";
+});
+
+addEventListenerIfExists("backguerrir", "click", function () {
+  document.getElementById("guerrirvideo").style.display = "none";
   document.getElementById("chapter3index2").style.display = "block";
 });
 
