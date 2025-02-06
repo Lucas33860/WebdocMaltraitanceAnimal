@@ -976,7 +976,6 @@ iframe {
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-  background-color: #2e2118;
   height: 10%;
 }
 
@@ -988,7 +987,6 @@ iframe {
   gap: 50px;
   height: 60%;
   width: 100%;
-  background-color: red;
   margin-top: 30px;
   margin-bottom: 30px;
 }
@@ -996,7 +994,84 @@ iframe {
 .card-new-podcast {
   width: 25%;
   height: 100%;
-  background: white;
+  &:hover {
+    cursor: pointer;
+    scale: 1.1;
+    transition: 1s;
+  }
+}
+
+.card-new-top-img {
+  width: 100%;
+  height: 80%;
+}
+
+.img1 {
+  background: url(/images/newvideo1.png) no-repeat center center;
+
+  border-radius: 18.389px 18.389px 0 0;
+}
+
+.img2 {
+  background: url(/images/newvideo2.png) no-repeat center center;
+
+  border-radius: 18.389px 18.389px 0 0;
+}
+
+.img3 {
+  background: url(/images/newvideo3.png) no-repeat center center;
+
+  border-radius: 18.389px 18.389px 0 0;
+}
+
+.card-new-bot-text {
+  width: 100%;
+  height: 20%;
+  border-radius: 0 0 18.389px 18.389px;
+  background: radial-gradient(
+    242.23% 241.86% at 53.72% -58.25%,
+    #404657 0%,
+    rgba(64, 70, 87, 0) 100%
+  );
+  backdrop-filter: blur(47.73002243041992px);
+  h2 {
+    color: var(--Neutural-White, #fff);
+    font-feature-settings: "liga" off;
+    font-size: 21px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 33.692px; /* 160.437% */
+    margin-left: 10px;
+  }
+  p {
+    color: var(--Neutural-Grey-1, #a7aab5);
+    font-feature-settings: "liga" off;
+    font-size: 21px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 33.692px; /* 160.437% */
+    margin-left: 10px;
+    margin-top: 10px;
+  }
+}
+
+.podcast-card-new-p {
+  color: #fff;
+  text-align: center;
+  font-size: 20px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.global-new-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  height: 100%;
 }
 
 /*  */
