@@ -35,6 +35,7 @@ const server = createServer(async (req, res) => {
       ".webm": "video/webm",
       ".avi": "video/x-msvideo",
       ".mov": "video/quicktime",
+      ".aac": "audio/aac",
     };
     const contentType = mimeTypes[ext] || "application/octet-stream";
 
