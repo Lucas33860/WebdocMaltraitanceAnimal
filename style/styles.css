@@ -581,14 +581,14 @@ iframe {
 }
 
 .back-pod1 {
-  background-image: url("/images/podcast1.png");
+  background-image: url("/images/Podcast1animaux.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
 
 .back-pod2 {
-  background-image: url("/images/podcast1.png");
+  background-image: url("/images/Podcast2intervenant.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -960,13 +960,13 @@ iframe {
 
 .back-temoin1 {
   border-radius: 18.412px 18.412px 0 0;
-  background: url(/images/temoignage1.png) no-repeat center center;
+  background: url(/images/temoignagefou.png) no-repeat center center;
   background-size: cover;
 }
 
 .back-temoin2 {
   border-radius: 18.412px 18.412px 0 0;
-  background: url(/images/temoignage2.png) no-repeat center center;
+  background: url(/images/temoignage1.png) no-repeat center center;
   background-size: cover;
 }
 
