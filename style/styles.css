@@ -388,7 +388,6 @@ iframe {
     text-align: center;
     width: 85%;
     color: #fff;
-    margin: 80px 0 20px 0;
   }
   p {
     margin-top: 50px;
@@ -969,6 +968,35 @@ iframe {
   border-radius: 18.412px 18.412px 0 0;
   background: url(/images/temoignage2.png) no-repeat center center;
   background-size: cover;
+}
+
+.podcast-card-new-h1 {
+  color: #fff;
+  font-size: 80px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  background-color: #2e2118;
+  height: 10%;
+}
+
+.podcast-new-global-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 50px;
+  height: 60%;
+  width: 100%;
+  background-color: red;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.card-new-podcast {
+  width: 25%;
+  height: 100%;
+  background: white;
 }
 
 /*  */

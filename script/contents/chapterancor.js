@@ -13,6 +13,8 @@ document.getElementById("podcast-cocotte").style.display = "none";
 document.getElementById("podcast-chatton").style.display = "none";
 document.getElementById("temoignage1").style.display = "none";
 document.getElementById("temoignage2").style.display = "none";
+document.getElementById("chapter3index1").style.display = "none";
+document.getElementById("chapter3index2").style.display = "none";
 
 const addEventListenerIfExists = (id, event, handler) => {
   const element = document.getElementById(id);
@@ -106,6 +108,16 @@ addEventListenerIfExists("backchapter2_9", "click", function () {
   document.getElementById("chapter2index2").style.display = "block";
 });
 
+addEventListenerIfExists("backfourrière", "click", function () {
+  document.getElementById("temoignage1").style.display = "none";
+  document.getElementById("podcast-sauveur1").style.display = "block";
+});
+
+addEventListenerIfExists("backasv", "click", function () {
+  document.getElementById("temoignage2").style.display = "none";
+  document.getElementById("podcast-sauveur1").style.display = "block";
+});
+
 addEventListenerIfExists("backchapter3_1", "click", function () {
   document.getElementById("chapter3index1").style.display = "none";
   document.getElementById("contents").style.display = "block";
@@ -136,12 +148,12 @@ addEventListenerIfExists("chapter2next1", "click", function () {
   document.getElementById("chapter2index2").style.display = "block";
 });
 
-addEventListenerIfExists("chapter2next2", "click", function () {
-  document.getElementById("chapter2index2").style.display = "none";
+addEventListenerIfExists("chapter2nextchapitre3", "click", function () {
+  document.getElementById("podcast-animaux1").style.display = "none";
   document.getElementById("chapter3index1").style.display = "block";
 });
 
-addEventListenerIfExists("chapter2next3", "click", function () {
+addEventListenerIfExists("chapter2next2chapitre3", "click", function () {
   document.getElementById("podcast-sauveur1").style.display = "none";
   document.getElementById("chapter3index1").style.display = "block";
 });
@@ -209,6 +221,13 @@ addEventListenerIfExists("temoin1", "click", function () {
 addEventListenerIfExists("temoin2", "click", function () {
   document.getElementById("podcast-sauveur1").style.display = "none";
   document.getElementById("temoignage2").style.display = "block";
+});
+
+//CHAPITRE 3 //
+
+addEventListenerIfExists("chapter3next1", "click", function () {
+  document.getElementById("chapter3index1").style.display = "none";
+  document.getElementById("chapter3index2").style.display = "block";
 });
 
 // Podcast intern ancrage
