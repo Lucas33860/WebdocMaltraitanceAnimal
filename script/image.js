@@ -57,10 +57,10 @@ document.getElementById("leave4").onclick = function () {
   audio6.currentTime = 0;
 };
 
-const audio3 = new Audio("/audio/1976/Prise1.WAV");
-const audio4 = new Audio("/audio/2015/Prise1.WAV");
-const audio5 = new Audio("/audio/2023/Prise1.WAV");
-const audio6 = new Audio("/audio/patte/Prise1.WAV");
+const audio3 = new Audio("/audio/1976/1976.mp3");
+const audio4 = new Audio("/audio/2015/2015.mp3");
+const audio5 = new Audio("/audio/2023/2023.mp3");
+const audio6 = new Audio("/audio/patte/Patte.mp3");
 
 document.addEventListener("DOMContentLoaded", function () {
   document.querySelector(".picto1").onclick = function () {
