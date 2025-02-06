@@ -28,7 +28,7 @@ const server = createServer(async (req, res) => {
       ".otf": "font/otf",
       ".woff": "font/woff",
       ".woff2": "font/woff2",
-      ".mp3": "audio/mp3",
+      ".mp3": "audio/mpeg",
       ".wav": "audio/wav",
       ".ogg": "audio/ogg",
       ".mp4": "video/mp4",

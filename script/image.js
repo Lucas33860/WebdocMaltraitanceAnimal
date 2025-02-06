@@ -7,7 +7,7 @@ const textContainer5 = document.getElementById("text-container5");
 const textContainer6 = document.getElementById("text-container6");
 
 const audio1 = new Audio("/audio/pattemal/Prise1.WAV");
-const audio2 = new Audio("/audio/coderural/Prise1.WAV");
+const audio2 = new Audio("/audio/coderural/Coderural.aac");
 
 document.getElementById("next3").onclick = function () {
   audio1.pause();
