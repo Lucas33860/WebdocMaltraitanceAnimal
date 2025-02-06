@@ -19,6 +19,9 @@ document.getElementById("luttervideo").style.display = "none";
 document.getElementById("passionvideo").style.display = "none";
 document.getElementById("guerrirvideo").style.display = "none";
 document.getElementById("creditindex1").style.display = "none";
+document.getElementById("creditindex2").style.display = "none";
+document.getElementById("ml").style.display = "none";
+document.getElementById("cgu").style.display = "none";
 
 const addEventListenerIfExists = (id, event, handler) => {
   const element = document.getElementById(id);
@@ -127,14 +130,44 @@ addEventListenerIfExists("backchapter3_1", "click", function () {
   document.getElementById("contents").style.display = "block";
 });
 
-addEventListenerIfExists("backchapter4_1", "click", function () {
-  document.getElementById("chapter4index1").style.display = "none";
-  document.getElementById("contents").style.display = "block";
-});
-
 addEventListenerIfExists("backcredit1", "click", function () {
   document.getElementById("creditindex1").style.display = "none";
   document.getElementById("contents").style.display = "block";
+});
+
+addEventListenerIfExists("backcredit2", "click", function () {
+  document.getElementById("creditindex2").style.display = "none";
+  document.getElementById("creditindex1").style.display = "block";
+});
+
+addEventListenerIfExists("creditnext1", "click", function () {
+  document.getElementById("creditindex1").style.display = "none";
+  document.getElementById("creditindex2").style.display = "block";
+});
+
+addEventListenerIfExists("backml", "click", function () {
+  document.getElementById("ml").style.display = "none";
+  document.getElementById("creditindex2").style.display = "block";
+});
+
+addEventListenerIfExists("backcgu", "click", function () {
+  document.getElementById("cgu").style.display = "none";
+  document.getElementById("creditindex2").style.display = "block";
+});
+
+addEventListenerIfExists("creditsommaire", "click", function () {
+  document.getElementById("creditindex2").style.display = "none";
+  document.getElementById("contents").style.display = "block";
+});
+
+addEventListenerIfExists("mlbutton", "click", function () {
+  document.getElementById("creditindex2").style.display = "none";
+  document.getElementById("ml").style.display = "block";
+});
+
+addEventListenerIfExists("cgubutton", "click", function () {
+  document.getElementById("creditindex2").style.display = "none";
+  document.getElementById("cgu").style.display = "block";
 });
 
 addEventListenerIfExists("chapter1next1", "click", function () {
