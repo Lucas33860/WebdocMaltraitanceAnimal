@@ -37,15 +37,15 @@ body {
 }
 
 .content img {
-  width: 100%;
-  height: auto;
+  width: 250px;
+  height: 250px;
 }
 
 .content h1 {
   font-family: BebasNeue;
   font-size: 13rem;
   text-align: center;
-  width: 50%;
+  width: 70%;
   color: #fff;
 }
 
