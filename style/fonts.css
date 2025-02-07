@@ -13,7 +13,31 @@
   src: url("/fonts/KleeOne-Regular.ttf") format("opentype");
 }
 
+@font-face {
+  font-family: "CroissantOne";
+  src: url("/fonts/CroissantOne-Regular.ttf") format("opentype");
+}
+
 h1 {
   font-family: BebasNeue;
   font-size: 2.5rem;
+}
+
+h2 {
+  font-family: CroissantOne;
+  font-size: 2rem;
+}
+h3 {
+  font-family: KleeOne;
+  font-size: 1.5rem;
+}
+
+p {
+  font-family: KleeOne;
+  font-size: 1rem;
+}
+
+li {
+  font-family: CroissantOne;
+  font-size: 1rem;
 }
