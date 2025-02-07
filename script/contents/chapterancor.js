@@ -302,6 +302,11 @@ addEventListenerIfExists("backguerrir", "click", function () {
   document.getElementById("chapter3index2").style.display = "block";
 });
 
+addEventListenerIfExists("backchapter3_2", "click", function () {
+  document.getElementById("chapter3index2").style.display = "none";
+  document.getElementById("contents").style.display = "block";
+});
+
 // Podcast intern ancrage
 
 document.querySelectorAll(".hermes-podcast").forEach((element) => {
